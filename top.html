@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section-nav">
+        <header class="header">
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li><a href="habits.html" class="nav-link">Мои привычки</a></li>
+                    <li><a href="calendar.html" class="nav-link">Календарь</a></li>
+                    <li><a href="top.html" class="nav-link">Топ</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <section class="section-top">
+        <div class="top-container">
+            <h2>Топ самых успешных привычек</h2>
+            <div class="top-filter">
+                <button class="filter-btn active" onclick="changeTopPeriod('all')">За всё время</button>
+                <button class="filter-btn" onclick="changeTopPeriod('month')">За месяц</button>
+                <button class="filter-btn" onclick="changeTopPeriod('week')">За неделю</button>
+            </div>
+            <div id="topList" class="top-list"></div>
+            <div class="top-stats">
+                <div class="top-stat-card">
+                    <span class="top-stat-value" id="topTotalHabits">0</span>
+                    <span class="top-stat-label">Всего привычек</span>
+                </div>
+                <div class="top-stat-card">
+                    <span class="top-stat-value" id="topBestPercent">0%</span>
+                    <span class="top-stat-label">Лучший результат</span>
+                </div>
+                <div class="top-stat-card">
+                    <span class="top-stat-value" id="topAveragePercent">0%</span>
+                    <span class="top-stat-label">Средний результат</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/habit.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/stats.js"></script>
+    <script src="scripts/calendar.js"></script>
+    <script src="scripts/top.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

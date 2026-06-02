@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section-nav">
+        <header class="header">
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li><a href="habits.html" class="nav-link">Мои привычки</a></li>
+                    <li><a href="calendar.html" class="nav-link">Календарь</a></li>
+                    <li><a href="top.html" class="nav-link">Топ</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section class="section-calendar">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button class="month-btn" onclick="changeMonth(-1)">◀</button>
+                <h2 id="monthTitle">Май 2026</h2>
+                <button class="month-btn" onclick="changeMonth(1)">▶</button>
+                <button class="today-btn" onclick="goToToday()">Сегодня</button>
+            </div>
+            <div class="calendar-weekdays">
+                <div class="weekday">Пн</div>
+                <div class="weekday">Вт</div>
+                <div class="weekday">Ср</div>
+                <div class="weekday">Чт</div>
+                <div class="weekday">Пт</div>
+                <div class="weekday">Сб</div>
+                <div class="weekday">Вс</div>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+            </div>
+            <div class="calendar-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Выполнено за месяц:</span>
+                    <span id="monthCompleted" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Процент выполнения:</span>
+                    <span id="monthPercent" class="stat-value">0%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Лучшая серия:</span>
+                    <span id="bestStreak" class="stat-value">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/habit.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/stats.js"></script>
+    <script src="scripts/calendar.js"></script>
+    <script src="scripts/top.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

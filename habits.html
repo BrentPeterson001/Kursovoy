@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section-header">
+        <header class="header">
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li><a href="habits.html" class="nav-link">Мои привычки</a></li>
+                    <li><a href="calendar.html" class="nav-link">Календарь</a></li>
+                    <li><a href="top.html" class="nav-link">Топ</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section class="section-habits">
+        <div class="habits-container">
+            <h2>Выбрать дату:</h2>
+                <div class="calendar-container-habits">
+                    <input class="input-date" type="date" id="historyDate">
+                </div>
+                <div id="habitsList" class="habits-list"></div>
+                <div class="habits-add"><label for="habitInput"></label>
+                <input 
+                    type="text" 
+                    id="habitInput" 
+                    class="habit-input" 
+                    placeholder="Добавить привычку..."
+                    maxlength="50"
+                    autocomplete="off"
+                ></div>
+                <div class="habits-reset">
+                    <button class="reset-stats-btn" onclick="resetAllStats()">Сбросить статистику?</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/habit.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/stats.js"></script>
+    <script src="scripts/calendar.js"></script>
+    <script src="scripts/top.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
