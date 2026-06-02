@@ -1,7 +1,7 @@
 ## Установка и запуск
 1. **Склонируйте репозиторий:**
 ```bash
-git clone <git@github.com:BrentPeterson001/Kursovoy.git>
+git clone git@github.com:BrentPeterson001/Kursovoy.git
 ```
 2. **Откройте папку проекта в Visual Studio Code.**
 
