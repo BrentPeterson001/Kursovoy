@@ -84,13 +84,7 @@ const renderTopHabits = () => {
     }
     
     if (!habits || habits.length === 0) {
-        topList.innerHTML = `
-            <div class="empty-state">
-                <div class="empty-emoji">✨</div>
-                <div class="empty-text">Нет привычек</div>
-                <div class="empty-hint">Добавьте первую привычку на главной странице</div>
-            </div>
-        `;
+        topList.innerHTML = '';
         if (typeof updateTopStats === 'function') updateTopStats([]);
         return;
     }
