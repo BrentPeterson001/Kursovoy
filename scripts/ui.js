@@ -242,6 +242,9 @@ const resetAllStats = () => {
         habit.completedDates = [];
     });
     saveToStorage();
+
+    localStorage.removeItem('defaultHabitAdded')
+
     displayHabits();
     displayStats();
     

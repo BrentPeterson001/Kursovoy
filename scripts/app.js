@@ -1,16 +1,25 @@
+// ========== ПРИВЫЧКА ПО УМОЛЧАНИЮ ==========
+const addDefaultHabitIfNeeded = () => {
+    const hasDefaultBeedAdded = localStorage.getItem('defaultHabitAdded')
+
+    if (!hasDefaultBeedAdded && habits.length === 0) {
+        const defaultHabit = new HabitItem(Date.now(), 'Зарядка');
+        habits.push(defaultHabit);
+        saveToStorage();
+        localStorage.setItem('defaultHabitAdded', 'true');
+    }
+}
+
 // ========== ГЛАВНАЯ ИНИЦИАЛИЗАЦИЯ ==========
 const init = () => {
     // Загружаем данные
     loadFromStorage();
     
+    // Загружаем привычку по умолчанию
+    addDefaultHabitIfNeeded();
+
     // Загружаем сохранённую дату
     loadSelectedDate();
-    
-    if (habits.length === 0) {
-        const defaultHabit = new HabitItem(Date.now(), 'Зарядка');
-        habits.push(defaultHabit);
-        saveToStorage();
-    }
 
     // Отображаем привычки для ВЫБРАННОЙ даты
     displayHabitsForDate();
